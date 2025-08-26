@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="24dp">
+
+        <!-- Título bem visível -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Leitor de Texto OCR"
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="32dp"
+            android:importantForAccessibility="yes"
+            android:contentDescription="Leitor de texto para deficientes visuais"/>
+
+        <!-- Botão Selecionar Imagem -->
+        <Button
+            android:id="@+id/btnSelectImage"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:text="📷 Selecionar Imagem"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:backgroundTint="#1E88E5"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="Botão para selecionar uma imagem do dispositivo"/>
+
+        <!-- Exibição da imagem -->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginBottom="20dp"
+            android:scaleType="fitCenter"
+            android:background="#222222"
+            android:contentDescription="Pré-visualização da imagem escolhida"/>
+
+        <!-- Texto reconhecido -->
+        <TextView
+            android:id="@+id/textViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="O texto reconhecido aparecerá aqui."
+            android:layout_marginBottom="20dp"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:background="#333333"
+            android:padding="20dp"
+            android:focusable="true"
+            android:importantForAccessibility="yes"
+            android:contentDescription="Área onde será exibido o texto lido"/>
+
+        <!-- Botão Ler em Voz Alta -->
+        <Button
+            android:id="@+id/btnSpeak"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:text="🔊 Ler em Voz Alta"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:backgroundTint="#43A047"
+            android:textColor="@android:color/white"
+            android:contentDescription="Botão para ouvir o texto reconhecido em voz alta"/>
+
+    </LinearLayout>
+</ScrollView>
